@@ -1,13 +1,11 @@
 var gulp         = require('gulp'),
 		sass         = require('gulp-sass'),
 		autoprefixer = require('gulp-autoprefixer'),
-		cleanCSS    = require('gulp-clean-css'),
 		browserSync  = require('browser-sync').create(),
 		concat       = require('gulp-concat'),
 		imagemin = require('gulp-imagemin'),
 		pngquant    = require('imagemin-pngquant'),
-		cache       = require('gulp-cache'),
-		uglify       = require('gulp-uglify');
+		cache       = require('gulp-cache');
 
 gulp.task('img', function() {
     return gulp.src('app/img/**/*')
@@ -35,7 +33,6 @@ gulp.task('styles', function () {
 		includePaths: require('node-bourbon').includePaths
 	}).on('error', sass.logError))
 	.pipe(autoprefixer({browsers: ['last 15 versions'], cascade: false}))
-	//.pipe(cleanCSS())
 	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.stream());
 });
@@ -43,19 +40,10 @@ gulp.task('styles', function () {
 gulp.task('scripts', function() {
 	return gulp.src([
 		'./app/libs/jquery/jquery-1.11.2.min.js',
-		'./app/libs/fancyBox/jquery.fancybox.js',
 		'./app/libs/plugins-scroll/plugins-scroll.js',
-		'./app/libs/flickity/flickity.js',
 		])
 		.pipe(concat('libs.js'))
-		//.pipe(uglify()) //Minify libs.js
 		.pipe(gulp.dest('./app/js/'));
-});
-
-gulp.task('common', function() {
-  return gulp.src('./app/js/common.js')
-    .pipe(uglify())
-    .pipe(gulp.dest('./app/js/'));
 });
 
 gulp.task('watch', function () {

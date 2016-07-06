@@ -1,4 +1,7 @@
-/* ============================ form css =========================== */
+@import "bourbon";
+@import "vars.scss";
+
+/* ============================ thanks pages =========================== */
 #modal_callback_ok{
     h3,h4{
         font: 30px RobotoRegular,Arial,sans-serif;
@@ -9,6 +12,7 @@
     }
 }
 
+/* ============================ form css =========================== */
 .allert, .allert_tell {
     position: absolute;
     z-index: 20;
@@ -34,10 +38,7 @@
     font-style:italic;
     font-size: 14px;
     border-radius: 4px;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
+    @include transition(all .5s ease);
     min-width: 140px;
     text-align: left;
 }
@@ -51,7 +52,6 @@
     top:-6px;
     opacity: 1;
 }
-
 .mess_error {
     position: absolute;
     z-index: 10;
@@ -75,10 +75,8 @@
     left: 0;
     top: 60px;
     width: 97%;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-    }
+    box-sizing: border-box;
+}
 .tooltip-arrow {
     position: absolute;
     width: 0;
@@ -112,11 +110,11 @@
 .jb_input .field {
     width: 100%;
 }
-.jb_input {
- /*   overflow: hidden;*/
-}
-.jb_input .tooltip-arrow {}
 .jb_input .mess_error {position: relative; width: 100%; padding: 5px 0px; top: -5px; float: left;}
+.fa-warning:before,.fa-exclamation-triangle:before {
+  content: "\f071";
+  font-family: FontAwesome;
+}
 
 /* ============================ form css media =========================== */
 @media only screen and (max-width : 992px) {
@@ -135,43 +133,29 @@
     }
 }
 
-@media only screen and (max-width : 320px) {
-    #modal_callback_ok{
-        height: 200px;
-    }
-    .fancybox-inner{
-        width: auto!important;
-    }
-    .fancybox-close{
-        top: 0!important;
-        right: 0!important;
-    }
-}
-
 /* ============================ input bottom =========================== */
 form{
-	.bar{
-	    position:relative;
-	    display:block;
-	    width:100%;
-	}
-	.bar:before, .bar:after     {
-	  content:'';
-	  height:2px; 
-	  width:0;
-	  bottom:1px; 
-	  position:absolute;
-	  background:#5264AE; 
-	  @include transition(all .2s ease);
-	}
-	.bar:before {
-	  left:50%;
-	}
-	.bar:after {
-	  right:50%; 
-	}
-
-	input:focus ~ .bar:before, input:focus ~ .bar:after {
-	  width:50%;
-	}
+    .bar{
+       position:relative;
+       display:block;
+       width:100%;
+   }
+   .bar:before, .bar:after     {
+        content:'';
+        height:2px; 
+        width:0;
+        bottom:1px; 
+        position:absolute;
+        background:#5264AE; 
+        @include transition(all .2s ease);
+    }
+    .bar:before {
+       left:50%;
+   }
+   .bar:after {
+       right:50%; 
+   }
+   input:focus ~ .bar:before, input:focus ~ .bar:after {
+       width:50%;
+   }
 }
