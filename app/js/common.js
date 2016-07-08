@@ -9,11 +9,7 @@ $(function() {
 	} catch(err) {
 
 	};
-
-	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
-
-	// fancybox
-	$("a.modal").fancybox();
+	
 });
 
 //Форма отправки 2.0
