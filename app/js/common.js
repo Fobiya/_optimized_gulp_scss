@@ -72,8 +72,8 @@ $(function() {
 						url: 'mail.php',
 						data: msg,
 						success: function() {
-							$( "#modal_callback_ok h4" ).remove();
-							$( "#modal_callback_ok" ).prepend("<h4>"+name+",</h4>");
+							$( "#modal_callback_ok .top h4" ).remove();
+							$( "#modal_callback_ok .top" ).append("<h4>"+name+"</h4>");
 							$('form').trigger("reset");
 							setTimeout(function(){  $("[name=send]").removeAttr("disabled"); }, 1000);
                             // Настройки модального окна после удачной отправки
@@ -96,8 +96,8 @@ $(function() {
 							url: 'https://app.getresponse.com/add_subscriber.html',
 							data: msg,
 							statusCode: {0:function() {
-								$( "#modal_callback_ok h4" ).remove();
-								$( "#modal_callback_ok" ).prepend("<h4>"+name+",</h4>");
+								$( "#modal_callback_ok .top h4" ).remove();
+								$( "#modal_callback_ok .top" ).append("<h4>"+name+"</h4>");
 								$('form').trigger("reset");
 								setTimeout(function(){  $("[name=send]").removeAttr("disabled"); }, 1000);
 								$(".fancybox-close").click();
