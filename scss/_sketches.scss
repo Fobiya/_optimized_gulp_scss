@@ -3,119 +3,122 @@
 
 /* ============================ thanks pages =========================== */
 #modal_callback_ok{
-    text-align: center;
-    max-width: 500px;
-    margin: 0 auto;
-    .top{
-        padding-top: 20px;
-        padding-bottom: 20px;
-        position: relative;
-        &:after {
-            content: ''; 
-            position: absolute;
-            left: 48%; bottom: -20px;
-            border: 10px solid transparent;
-            border-top: 10px solid #fff;
-        }
-        i{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 80px;
-            height: 80px;
-            color: yellow;
-            border-radius: 50%;
-            background-color: #7dbaab;
-            box-sizing:border-box;
-            font-size: 28px;
-            margin: 0 auto;
-        }
-        h4{
-            font: 30px RobotoRegular,Arial,sans-serif;
-            font-weight: 700;
-            margin-top: 10px;
-        }
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+  .top{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    &:after {
+      content: ''; 
+      position: absolute;
+      left: 48%; bottom: -20px;
+      border: 10px solid transparent;
+      border-top: 10px solid #fff;
     }
-    .bottom{
-        background-color: #7dbaab;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        h3{
-            font: 30px RobotoRegular,Arial,sans-serif;
-            text-align: center;
-            color: #fff;
-        }
+    i{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px;
+      height: 80px;
+      color: yellow;
+      border-radius: 50%;
+      background-color: #7dbaab;
+      box-sizing:border-box;
+      font-size: 28px;
+      margin: 0 auto;
     }
+    h4{
+      font: 30px RobotoRegular,Arial,sans-serif;
+      font-weight: 700;
+      margin-top: 10px;
+    }
+  }
+  .bottom{
+    background-color: #7dbaab;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    h3{
+      font: 30px RobotoRegular,Arial,sans-serif;
+      text-align: center;
+      color: #fff;
+    }
+  }
 }
 
 /* ============================ form css =========================== */
 form{
-    .field {
-        position: relative;
-    }
-    .allert{
-        display: block;
-        position: absolute;
-        z-index: 20;
-        top: 50%;
-        right: 5%;
-        margin-top: -21px;
-        color: #FF6565;
-        cursor: default;
-    }
-    .error {
-        border: 1px solid red !important;
-    }                 
-    .allert span{
-        display: none;
-        opacity: 0;
-        padding : 5px;
-        margin-left : 5px;
-        color:#000;
-        font-style:italic;
-        font-size: 14px;
-        border-radius: 4px;
-        min-width: 140px;
-        text-align: left;
-        @include transition(all .5s ease);
-    }
-    .allert:hover span{
-        border : 1px solid #FF6565;
-        background : #fff;
-        display : inline;
-        position : absolute;
-        color : #4e4e4e;
-        right:24px;
-        top:-6px;
-        opacity: 1;
-    }
+  .field {
+    display: block;
+    float: left;
+    position: relative;
+    overflow: hidden;
+  }
+  .allert{
+    display: block;
+    position: absolute;
+    z-index: 20;
+    top: 50%;
+    margin-top: -14px;
+    right: 5%;
+    color: #FF6565;
+    cursor: default;
+  }
+  .error {
+    border: 1px solid red !important;
+  }                 
+  .allert span{
+    display: none;
+    opacity: 0;
+    padding : 5px;
+    margin-left : 5px;
+    color:#000;
+    font-style:italic;
+    font-size: 14px;
+    border-radius: 4px;
+    min-width: 140px;
+    text-align: left;
+    @include transition(all .5s ease);
+  }
+  .allert:hover span{
+    border : 1px solid #FF6565;
+    background : #fff;
+    display : inline;
+    position : absolute;
+    color : #4e4e4e;
+    right:24px;
+    top:-6px;
+    opacity: 1;
+  }
 }
 
 /* ============================ input bottom =========================== */
 form{
-    .bar{
-       position:relative;
-       display:block;
-       width:100%;
-   }
-   .bar:before, .bar:after     {
-        content:'';
-        height:2px; 
-        width:0;
-        bottom:1px; 
-        position:absolute;
-        background:#5264AE; 
-        @include transition(all .2s ease);
-    }
-    .bar:before {
-       left:50%;
-   }
-   .bar:after {
-       right:50%; 
-   }
-   input:focus ~ .bar:before, input:focus ~ .bar:after {
-       width:50%;
-   }
+  .bar{
+   position:relative;
+   display:block;
+   width:100%;
+ }
+ .bar:before, .bar:after     {
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#5264AE; 
+  @include transition(all .2s ease);
+}
+.bar:before {
+ left:50%;
+}
+.bar:after {
+ right:50%; 
+}
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+ width:50%;
+}
 }
 
 /* ============================ font-awesome =========================== */
