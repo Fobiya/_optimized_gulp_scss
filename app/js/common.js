@@ -44,16 +44,16 @@ $(function() {
 				if ($(this).attr("type") == 'email') {
 					if(!pattern.test($(this).val())) {
 						$("[name=email]").val('');
-						$(this).addClass('error').parent('.field').append('<div class="allert"><span>Укажите коректный e-mail</span><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></div>');
+						$(this).addClass('error error_email').parent('.field').append('<div class="allert"><span>Некоректный e-mail</span><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></div>');
 						error = 1;
 						$(":input.error:first").focus();
 					}
 				}
-				var patterntel = /^()[0-9]{9,18}/i;
+				var patterntel = /^()[+0-9]{9,18}/i;
 				if ( $(this).attr("type") == 'tel') {
 					if(!patterntel.test($(this).val())) {
 						$("[name=phone]").val('');
-						$(this).addClass('error').parent('.field').append('<div class="allert"><span>Укажите коректный номер телефона</span><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></div>');
+						$(this).addClass('error error_tel').parent('.field').append('<div class="allert"><span>Некоректный номер телефона</span><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></div>');
 						error = 1;
 						$(":input.error:first").focus();
 					}
