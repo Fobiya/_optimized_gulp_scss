@@ -5,7 +5,7 @@ var gulp         = require('gulp'),
 		concat       = require('gulp-concat'),
 		imagemin = require('gulp-imagemin'),
 		pngquant    = require('imagemin-pngquant'),
-		cache       = require('gulp-cache');
+		cache       = require('gulp-cache'); 
 
 gulp.task('img', function() {
     return gulp.src('app/img/**/*')
