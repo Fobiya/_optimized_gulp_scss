@@ -78,7 +78,6 @@ $(function() {
 							setTimeout(function(){  $("[name=send]").removeAttr("disabled"); }, 1000);
                             // Настройки модального окна после удачной отправки
                             $(".fancybox-close").click();
-                            $('div.md-show').removeClass('md-show');
                             $("#call_ok")[0].click();
                         },
                         error: function(xhr, str) {
@@ -102,7 +101,6 @@ $(function() {
 								setTimeout(function(){  $("[name=send]").removeAttr("disabled"); }, 1000);
 								$(".fancybox-close").click();
 								// Настройки модального окна после удачной отправки
-								$('div.md-show').removeClass('md-show');
 								$("#call_ok")[0].click();
 							}}
 						}),

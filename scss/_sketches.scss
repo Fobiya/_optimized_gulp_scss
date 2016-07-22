@@ -50,53 +50,57 @@
 
 /* ============================ form css =========================== */
 form{
-  .field {
-    display: block;
-    float: left;
-    position: relative;
-    overflow: hidden;
-  }
-  .allert{
-    display: block;
-    position: absolute;
-    z-index: 20;
-    top: 50%;
-    margin-top: -13px;
-    right: 5%;
-    color: #FF6565;
-    cursor: default;
-  }
-  .error {
-    border: 1px solid red !important;
-  }
-  .error_tel ~ .allert span{
-    min-width: 205px;
-  }    
-  .error_email ~ .allert span{
-    min-width: 140px;
-  }          
-  .allert span{
-    display: none;
-    opacity: 0;
-    padding : 5px;
-    margin-left : 5px;
-    color:#000;
-    font-style:italic;
-    font-size: 14px;
-    border-radius: 4px;
-    min-width: 140px;
-    text-align: left;
-    @include transition(all .5s ease);
-  }
-  .allert:hover span{
-    border : 1px solid #FF6565;
-    background : #fff;
-    display : inline;
-    position : absolute;
-    color : #4e4e4e;
-    right:24px;
-    top:-4px;
-    opacity: 1;
+  .form_input{
+    .field {
+      display: block;
+      float: left;
+      position: relative;
+      overflow: hidden;
+      .allert{
+        display: block;
+        position: absolute;
+        z-index: 20;
+        top: 50%;
+        margin-top: -13px;
+        right: 13%;
+        color: #FF6565;
+        cursor: default;
+        &:hover{
+          span{
+            border : 1px solid #FF6565;
+            background : #fff;
+            display : inline;
+            position : absolute;
+            color : #4e4e4e;
+            right:24px;
+            top:-4px;
+            opacity: 1;
+          }
+        }
+        span{
+          display: none;
+          opacity: 0;
+          padding : 5px;
+          margin-left : 5px;
+          color:#000;
+          font-style:italic;
+          font-size: 14px;
+          border-radius: 4px;
+          min-width: 140px;
+          text-align: left;
+          @include transition(all .5s ease);
+        }
+      }
+      .error {
+        border: 1px solid red !important;
+      }
+      .error_tel ~ .allert span{
+        min-width: 205px;
+      }    
+      .error_email ~ .allert span{
+        min-width: 140px;
+      } 
+    }
   }
 }
 
