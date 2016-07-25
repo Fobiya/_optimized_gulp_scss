@@ -10,7 +10,7 @@ $(function() {
 
 	};
 
-	// fancybox
+	//fancybox
 	$("a.modal").fancybox();
 	$("a.modall_pad").fancybox({
 		padding: 0,
