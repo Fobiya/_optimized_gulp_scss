@@ -79,6 +79,8 @@ $(function() {
                             // Настройки модального окна после удачной отправки
                             $(".fancybox-close").click();
                             $("#call_ok")[0].click();
+                            // yaCounter38938320.reachGoal('zayavka');
+                            // window.location = "http://lifeup.com.ua/success_lp/";
                         },
                         error: function(xhr, str) {
                         	alert('Возникла ошибка: ' + xhr.responseCode);
@@ -102,6 +104,8 @@ $(function() {
 								$(".fancybox-close").click();
 								// Настройки модального окна после удачной отправки
 								$("#call_ok")[0].click();
+                           		// yaCounter38938320.reachGoal('zayavka');
+                           		// window.location = "http://lifeup.com.ua/success_lp/";
 							}}
 						}),
 						error:  function(xhr, str) {
