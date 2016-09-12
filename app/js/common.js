@@ -80,7 +80,7 @@ $(function() {
                             $(".fancybox-close").click();
                             $("#call_ok")[0].click();
                             // yaCounter38938320.reachGoal('zayavka');
-                            // window.location = "http://lifeup.com.ua/success_lp/";
+                            //window.location = "http://pintosevich.com/successkiev/";
                         },
                         error: function(xhr, str) {
                         	alert('Возникла ошибка: ' + xhr.responseCode);
@@ -105,7 +105,7 @@ $(function() {
 								// Настройки модального окна после удачной отправки
 								$("#call_ok")[0].click();
                            		// yaCounter38938320.reachGoal('zayavka');
-                           		// window.location = "http://lifeup.com.ua/success_lp/";
+                           		//window.location = "http://pintosevich.com/successkiev/";
 							}}
 						}),
 						error:  function(xhr, str) {
