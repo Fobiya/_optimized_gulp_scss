@@ -14,7 +14,8 @@ $(function() {
 	$("a.modal").fancybox();
 	$("a.modall_pad").fancybox({
 		padding: 0,
-		margin: 0
+		margin: 0,
+		title: false
 	});
 	
 });
